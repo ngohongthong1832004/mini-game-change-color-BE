@@ -22,7 +22,7 @@ const handle = (req, res) => {
 }
 
 
-app.post("/info", handle)
+app.post("/post", handle)
 app.get("/", res)
 app.get("/learn", (req, res) => {
     res.json({
@@ -32,6 +32,6 @@ app.get("/learn", (req, res) => {
 })
 
 
-app.listen(3001, () => {
-    console.log("Server is running on port 3001")
+app.listen(3000, () => {
+    console.log("Server is running on port 3000 BACK_END")
 })
