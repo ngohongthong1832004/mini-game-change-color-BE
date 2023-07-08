@@ -1,0 +1,20 @@
+[
+    {
+      "id": 1,
+      "name": "admin",
+      "age": 9999,
+      "skill": "nodeJs, React, Django"
+    },
+    {
+      "id": 3,
+      "name": "Thong",
+      "age": 90,
+      "skill": "Python"
+    },
+    {
+      "id": 4,
+      "name": "pine",
+      "age": 13,
+      "skill": "docker"
+    }
+]
