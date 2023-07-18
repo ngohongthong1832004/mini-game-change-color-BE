@@ -9,8 +9,8 @@ const connection = mysql.createConnection({
     // The following are not needed for local development
     host: 'localhost',
     user: 'root',
-    password: 'mysecretpassword',
-    database: 'mydatabase',
+    password: 'root',
+    database: 'mysql',
 });
 
 connection.connect((err) => {
