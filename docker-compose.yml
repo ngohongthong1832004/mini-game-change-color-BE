@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  db:
+    build: ../DB
+    restart: always
+    ports:
+      - "3308:3308"
+    # volumes:
+    #   - ./file.sql:/docker-entrypoint-initdb.d/file.sql
+    environment:
+      MYSQL_ROOT_PASSWORD: your-root-password
+      MYSQL_DATABASE: mini_game_change_color
+
+  backend:
+    build: .
+    restart: always
+    ports:
+      - "3001:3000"
+    depends_on:
+      - db

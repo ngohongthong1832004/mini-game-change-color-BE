@@ -1,17 +1,20 @@
 const mysql = require('mysql');
 
 const connection = mysql.createConnection({
-    // host: 'localhost', // replace with your MySQL host
-    // user: 'root', // replace with your MySQL username
-    // password: '', // replace with your MySQL password
-    // database: 'mini-game-change-color', // replace with your MySQL database name
-
-    // The following are not needed for local development
-    host: 'localhost',
-    user: 'root',
-    password: 'root',
-    database: 'mysql',
+  host: 'db', // This refers to the "db" service defined in docker-compose.yml
+  user: 'root',
+  password: 'your-root-password', // Replace with the actual root password
+  database: 'mini_game_change_color',
+  port: '3308',
 });
+
+// const connection = mysql.createConnection({
+//   host: 'localhost',
+//   user: 'root',
+//   password: 'your-root-password', // Use the same root password set during container initialization
+// });
+
+
 
 connection.connect((err) => {
   if (err) {
